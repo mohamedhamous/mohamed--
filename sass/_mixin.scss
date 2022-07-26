@@ -1,0 +1,179 @@
+
+    
+ .nav{
+        width: 100%;
+        height: 150px;
+        background-color:black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        z-index: 1000;
+    
+        .d1{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content:space-between;
+            padding-top: 30px;
+            
+            .icon{
+                margin-left: 20px;
+                margin-right: 30px;
+                i{
+                    margin-right: 20px;
+                    color: #fff;
+                    transition-duration: 200ms;
+                    cursor: pointer;
+                }i:hover{
+                    color: #e5bf4a;
+                }
+                
+            }
+          
+            .number{
+                margin-right: 20px;
+               p{
+                border: 1px solid #e5bf4a;
+                padding: 15px 50px;
+                transition-duration: 200ms;
+                 cursor: pointer;
+                 color: #e5bf4a;
+               }p:hover{
+                background-color: #e5bf4a;
+                color: #fff;
+               
+               }
+            }
+        }
+        .d2{
+           width: 100%;
+           text-align: center;
+           margin-top: 20px;
+         
+           .checkbtn{
+           
+            font-size: 30px;
+            color:rgb(255, 255, 255);
+            float: right;
+            line-height: 80px;
+            position: absolute;
+            right: 40px;
+            cursor: pointer;
+            display: none;
+            margin-top: 0px;
+            transition-duration: 200ms;
+            
+        }.checkbtn:hover{
+            color: #e5bf4a;
+        }
+        #check{
+            display: none;
+        }
+           ul{
+           
+            li{
+                display: inline-block;
+                
+                list-style-type:none;
+                a{
+                    text-decoration: none;
+                    margin-right: 35px;
+                    color: #fff;
+                   transition-duration: 200ms;
+                    position: relative;
+                }a::after{
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    bottom: -5px;
+                    right: 5px;
+                    left: 0px;
+                    height: 1px;
+                    z-index: 1;
+                    transition: all .4s ease-out 0s;
+                    background: #e5bf4a;
+    
+                }a:hover::after{
+                    width: 100%;
+                }a:hover{
+                    color: #e5bf4a;
+                  
+    
+                }
+            }
+           }
+        }
+        
+    }
+    
+    @media (max-width:858px){
+      .nav{
+        width: 100%;
+        height: 150px;
+        .d1{
+            width: 100%;
+            display: block;
+            text-align: center;
+            .icon{
+                display: none;
+            }
+            .img{
+                margin-bottom: 5px;
+            }
+            .number{
+                display: none;
+            }
+        }
+    
+    
+        
+        .d2{
+            width: 100%;
+            .chck{
+                width: 100%;
+                height: 30px;
+                background-color: #6d6666;
+                margin-top: 20px;
+                position: relative;
+              }
+            .checkbtn{
+                display: block;
+                position: absolute;
+                top: -22px;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 30vh;
+                background-color:#6d6666;
+                left: -100%;
+                margin-top:0px;
+                text-align:center;
+                transition-duration: 200ms;
+                li{
+                    display: block;
+                   
+                   margin-top: 20px;
+                    a{
+                        font-size: 15px;
+                      
+                      
+                    }&:after{
+                        width: 0%;
+                    }
+                }
+                    }
+                
+    
+           #check:checked ~ ul{
+              left: 0%;
+            }
+        }
+        
+       
+    
+    
+    }
+        
+    }
